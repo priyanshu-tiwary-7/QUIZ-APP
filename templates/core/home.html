@@ -2,9 +2,17 @@
 
 {% block content %}
 
-<h1 class="mb-4">
-    Quiz Categories 🚀
-</h1>
+<div class="text-center mb-5">
+
+    <h1 class="display-4 fw-bold text-white">
+        🚀 Quiz Categories
+    </h1>
+
+    <p class="lead text-light">
+        Test your knowledge with interactive quizzes
+    </p>
+
+</div>
 
 <div class="row">
 
@@ -12,19 +20,21 @@
 
     <div class="col-md-4 mb-4">
 
-        <div class="card shadow p-3">
+        <div class="glass p-4 h-100 quiz-card">
 
-            <h3>
+            <h2 class="fw-bold text-warning">
                 {{ category.name }}
-            </h3>
+            </h2>
 
-            <p>
-                Start quiz from this category.
+            <p class="text-light mt-3">
+                Start quiz from this category and improve your skills.
             </p>
 
-            <a href="{% url 'category_quizzes' category.id %}"
-               class="btn btn-primary">
-               View Quiz
+            <a
+                href="{% url 'category_quizzes' category.id %}"
+                class="btn btn-primary w-100 mt-3"
+            >
+                Start Quiz
             </a>
 
         </div>
