@@ -1,0 +1,66 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow p-5 text-center">
+
+        <h1 class="mb-4">
+            Quiz Completed 🎉
+        </h1>
+
+        <h2>
+            {{ quiz.title }}
+        </h2>
+
+        <h3 class="mt-4">
+            Your Score
+        </h3>
+
+        <h1 class="display-3 text-success">
+
+            {{ score }}/{{ total_questions }}
+
+        </h1>
+
+        <h3 class="mt-4">
+
+            Percentage:
+
+            {% widthratio score total_questions 100 %}%
+
+        </h3>
+
+        {% if score >= total_questions|divisibleby:2 %}
+
+            <div class="alert alert-success mt-4">
+
+                Excellent Work 🚀🔥
+
+            </div>
+
+        {% else %}
+
+            <div class="alert alert-danger mt-4">
+
+                Keep Practicing 💪
+
+            </div>
+
+        {% endif %}
+
+        <a
+            href="{% url 'home' %}"
+            class="btn btn-dark btn-lg mt-4"
+        >
+
+            Back to Home
+
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

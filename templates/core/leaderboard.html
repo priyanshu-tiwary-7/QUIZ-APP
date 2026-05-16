@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h1 class="mb-5 text-center">
+        🏆 Leaderboard
+    </h1>
+
+    <div class="card shadow p-4">
+
+        <table class="table table-striped">
+
+            <thead class="thead-dark">
+
+                <tr>
+                    <th>Rank</th>
+                    <th>User</th>
+                    <th>Total Score</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for user in leaderboard_data %}
+
+                <tr>
+
+                    <td>
+                        {{ forloop.counter }}
+                    </td>
+
+                    <td>
+                        {{ user.user__username }}
+                    </td>
+
+                    <td>
+                        {{ user.total_score }}
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}

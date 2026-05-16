@@ -1,0 +1,141 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h1 class="text-center mb-5 display-4 font-weight-bold">
+
+        My Certificates 🎓
+
+    </h1>
+
+    {% if certificates %}
+
+        {% for certificate in certificates %}
+
+        <div class="certificate-box mb-5">
+
+            <div class="certificate-inner">
+
+                <div class="text-center">
+
+                    <h4 class="certificate-badge">
+
+                        🏆 QUIZ MASTER
+
+                    </h4>
+
+                    <h1 class="certificate-title">
+
+                        CERTIFICATE
+
+                    </h1>
+
+                    <h3 class="certificate-subtitle">
+
+                        OF ACHIEVEMENT
+
+                    </h3>
+
+                </div>
+
+                <div class="text-center mt-5">
+
+                    <p class="certificate-text">
+
+                        This is to certify that
+
+                    </p>
+
+                    <h1 class="certificate-name">
+
+                        {{ certificate.user.username }}
+
+                    </h1>
+
+                    <p class="certificate-text">
+
+                        has successfully completed the quiz
+
+                    </p>
+
+                    <h2 class="certificate-quiz">
+
+                        {{ certificate.quiz.title }}
+
+                    </h2>
+
+                    <p class="certificate-score mt-4">
+
+                        Score:
+                        <strong>
+                            {{ certificate.score }}/{{ certificate.total }}
+                        </strong>
+
+                    </p>
+
+                </div>
+
+                <div class="row mt-5">
+
+                    <div class="col-md-6 text-center">
+
+                        <div class="signature-line"></div>
+
+                        <p class="mt-2">
+
+                            Quiz Master
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-md-6 text-center">
+
+                        <p>
+
+                            <strong>
+
+                                Certificate ID
+
+                            </strong>
+
+                        </p>
+
+                        <p>
+
+                            {{ certificate.certificate_id }}
+
+                        </p>
+
+                        <p class="text-muted">
+
+                            Issued on:
+                            {{ certificate.issued_at }}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="alert alert-warning">
+
+            No certificates earned yet.
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

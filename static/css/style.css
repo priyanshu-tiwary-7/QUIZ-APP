@@ -1,0 +1,302 @@
+body {
+
+    padding-top: 70px;
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #312e81
+    );
+
+    min-height: 100vh;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+
+.navbar {
+
+    padding: 14px 25px;
+
+    background: rgba(15, 23, 42, 0.85) !important;
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar-brand {
+
+    font-weight: bold;
+
+    font-size: 1.4rem;
+
+    letter-spacing: 1px;
+}
+
+.navbar-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+/* Modern Buttons */
+
+.btn {
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.navbar .btn {
+
+    margin-top: 5px;
+}
+
+.btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 0 20px rgba(255,255,255,0.25);
+}
+
+/* Certificate Button */
+
+.btn-certificate {
+
+    background: linear-gradient(
+        45deg,
+        #ff4da6,
+        #ff1a8c
+    );
+
+    color: white;
+
+    border: none;
+}
+
+.btn-certificate:hover {
+
+    color: white;
+
+    box-shadow: 0 0 20px rgba(255,77,166,0.7);
+}
+
+/* Glass Cards */
+
+.card {
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+
+    color: white;
+
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* Certificate Design */
+
+.certificate-box {
+
+    background: linear-gradient(
+        135deg,
+        #fffdf5,
+        #ffffff
+    );
+
+    border: 8px solid #d4af37;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    color: #111827;
+}
+
+.certificate-inner {
+
+    border: 2px solid #d4af37;
+
+    border-radius: 15px;
+
+    padding: 50px;
+}
+
+.certificate-title {
+
+    font-size: 4rem;
+
+    font-weight: bold;
+
+    color: #1e3a8a;
+
+    letter-spacing: 4px;
+}
+
+.certificate-subtitle {
+
+    color: #d4af37;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.certificate-name {
+
+    font-size: 3rem;
+
+    font-family: cursive;
+
+    color: #111827;
+
+    margin: 20px 0;
+}
+
+.certificate-quiz {
+
+    background: #1e3a8a;
+
+    color: white;
+
+    display: inline-block;
+
+    padding: 10px 30px;
+
+    border-radius: 10px;
+
+    margin-top: 15px;
+}
+
+.certificate-text {
+
+    font-size: 1.3rem;
+}
+
+.certificate-score {
+
+    font-size: 1.5rem;
+}
+
+.certificate-badge {
+
+    display: inline-block;
+
+    background: gold;
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 0 15px rgba(255,215,0,0.6);
+}
+
+.signature-line {
+
+    width: 200px;
+
+    height: 2px;
+
+    background: #000;
+
+    margin: auto;
+}
+
+/* Progress Bar */
+
+.progress {
+
+    height: 22px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.1);
+}
+
+.progress-bar {
+
+    background: linear-gradient(
+        45deg,
+        #3b82f6,
+        #8b5cf6
+    );
+
+    font-weight: bold;
+}
+
+/* Alerts */
+
+.alert {
+
+    border-radius: 15px;
+}
+
+/* Tables */
+
+.table {
+
+    background: rgba(255,255,255,0.06);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    color: white;
+}
+
+.table th {
+
+    background: rgba(255,255,255,0.12);
+}
+
+/* Footer */
+
+footer {
+
+    background: rgba(15,23,42,0.9) !important;
+
+    backdrop-filter: blur(10px);
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+}

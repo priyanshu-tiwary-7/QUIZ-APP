@@ -1,0 +1,92 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h1 class="mb-5">
+        My Attempts 📚
+    </h1>
+
+    {% if attempts %}
+
+        <table class="table table-bordered shadow">
+
+            <thead class="thead-dark">
+
+                <tr>
+
+                    <th>
+                        Quiz
+                    </th>
+
+                    <th>
+                        Score
+                    </th>
+
+                    <th>
+                        Date
+                    </th>
+
+                    <th>
+                        Action
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for attempt in attempts %}
+
+                <tr>
+
+                    <td>
+                        {{ attempt.quiz.title }}
+                    </td>
+
+                    <td>
+                        {{ attempt.score }}/{{ attempt.total }}
+                    </td>
+
+                    <td>
+                        {{ attempt.completed_at|date:"d M Y, H:i" }}
+                    </td>
+
+                    <td>
+
+                        <a
+                           href="{% url 'attempt_detail' attempt.id %}"
+                           class="btn btn-primary btn-sm"
+                        >
+
+                           View Details
+
+                        </a>
+
+                </td>
+
+
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    {% else %}
+
+        <div class="alert alert-warning">
+
+            You have not attempted any quizzes yet.
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

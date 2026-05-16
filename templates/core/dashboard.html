@@ -1,0 +1,102 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h1 class="mb-5 text-center">
+        👤 My Dashboard
+    </h1>
+
+    <div class="row">
+
+        <div class="col-md-3 mb-4">
+
+            <div class="card shadow p-4 text-center">
+
+                <h4>Total Attempts</h4>
+
+                <h1 class="text-primary">
+                    {{ total_attempts }}
+                </h1>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="card shadow p-4 text-center">
+
+                <h4>Total Score</h4>
+
+                <h1 class="text-success">
+                    {{ total_score }}
+                </h1>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="card shadow p-4 text-center">
+
+                <h4>Average Score</h4>
+
+                <h1 class="text-warning">
+                    {{ average_score|floatformat:1 }}
+                </h1>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-4">
+
+            <div class="card shadow p-4 text-center">
+
+                <h4>Best Score</h4>
+
+                <h1 class="text-danger">
+                    {{ best_score }}
+                </h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card shadow p-4 mt-5">
+
+        <h3 class="mb-4">
+            Recent Attempts
+        </h3>
+
+        {% for result in recent_results %}
+
+        <div class="border rounded p-3 mb-3">
+
+            <h5>
+                {{ result.quiz.title }}
+            </h5>
+
+            <p>
+                Score:
+                {{ result.score }}/{{ result.total }}
+            </p>
+
+            <small class="text-muted">
+                {{ result.created_at }}
+            </small>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

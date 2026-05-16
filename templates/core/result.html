@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="text-center mt-5">
+
+    <h1>
+        Quiz Result 🎉
+    </h1>
+
+    <h2 class="mt-4">
+        Your Score:
+    </h2>
+
+    <h1 class="display-1 text-success">
+
+        {{ score }}/{{ total }}
+
+    </h1>
+
+    <a href="/"
+       class="btn btn-primary btn-lg mt-4">
+
+       Back To Home
+
+    </a>
+
+</div>
+
+{% endblock %}
